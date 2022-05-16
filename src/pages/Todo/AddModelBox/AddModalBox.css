@@ -1,0 +1,73 @@
+.overlay{
+    background-color: #00000082;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    
+    transition: all .5s ease;
+}
+.overlay.active{
+    visibility: visible;
+    opacity: 1;
+}
+.AddTodoItem_container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    height: 35vh;
+    max-width: 90%;
+    width: 450px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    box-shadow:  0 0 5px #00000024;
+    border-radius: 10px;
+    padding: 15px;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    transition: all .3s ease;
+}
+.AddTodoItem_container.active{
+    bottom: unset;
+    top:50%;
+    transition: all .3s ease;
+}
+.AddTodoItem_container p{
+    display: flex;
+    align-self: flex-start;
+}
+.AddTodoItem_container textarea{
+    width: 100%;
+    border: none;
+    padding: 10px 5px;
+    outline: none;
+    font-size: 20px;
+    box-shadow: 0 0 5px #00000024;
+    border-radius: 3px;
+    height: 140px;
+}
+
+.AddTodoItem_container .action_btns{
+    display: flex;
+    align-self: flex-end;
+}
+.AddTodoItem_container .action_btns button{
+    display: flex;
+    width: 100px;
+    border: none;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 5px;
+    background: var(--primary-color);
+    box-shadow: 0 0 5px #00000024;
+    color: darkgreen;
+    font-weight: 700;
+    font-size: 15px;
+}
